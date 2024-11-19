@@ -6,9 +6,39 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_accountA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_accountB",
+						"type": "address"
+					}
+				],
 				"stateMutability": "payable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
 			},
 			{
 				"anonymous": false,
@@ -33,6 +63,25 @@
 					}
 				],
 				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdrawal",
 				"type": "event"
 			},
 			{
@@ -121,7 +170,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contrato.sol": "SimpleTransfer"
+			"Contract.sol": "SimpleTransfer"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -135,12 +184,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contrato.sol": {
-			"keccak256": "0x070567f27fd5e840d4e609088395df22380361be4d1ad3b0b90d775e3c9bb8c7",
+		"Contract.sol": {
+			"keccak256": "0x96a7bf71e4e374957bed7263c2070cffdf98a318d452a64f8c2e9e59f79aac18",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://789b892ab94c5f93264d7d0dc0af839873d25a9dfa632e2caf6cb253997ade53",
-				"dweb:/ipfs/QmNZfQHi3Ft8LF47hqAKuMmWWE1DpgtwWbVQAcvQ3jBpos"
+				"bzz-raw://df873b8e4974d81e659db9116f3926f3ee640076cb19ec4e142a91cc68a7d268",
+				"dweb:/ipfs/QmXWg7n5ash2qUF6qMCyKXyGbSfEiBkvbRMFzfaCC7tX7L"
 			]
 		}
 	},
